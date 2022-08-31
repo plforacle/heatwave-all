@@ -423,15 +423,15 @@ LIMIT 10;</copy>
 2. Download the airport application zip file
 
     ```bash
-    <copy> sudo wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/fsulOSjXwCWISwMMXL6Hkv46FfgXvDyMs74tb0jFKIZH3UGAKft7hfAGoQUOSpCy/n/idazzjlcjqzj/b/bucket_apps/o/airport_web_01_eureka_ml_web_prod_version.zip</copy>
+    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/l0xSBnkZgPxLi2_me6MekElw4i2SrqnbY8-hVB9jl5JfB1n54MLnbMM5EZH1lHGz/n/id6iswug0zca/b/airportapp/o/_01_airpordb_ml_web.zip</copy>
     ```
 
     ```bash
-    <copy>sudo unzip airport_web_01_eureka_ml_web_prod_version.zip</copy>
+    <copy>sudo unzip _01_airpordb_ml_web.zip</copy>
     ```
 
     ```bash
-    <copy>cd /var/www/html/airport</copy>
+    <copy>cd /var/www/html/_01_airpordb_ml_web</copy>
     ```
 
     Replace the database IP in config.php file with your heatwave database IP and save the file.
@@ -442,11 +442,11 @@ LIMIT 10;</copy>
 
     run the application as follows:
 
-    computeIP//web/airport_web.php
+    computeIP/_01_airpordb_ml_web/ 
 
     ![MDS](./images/airport_web.png "airport-web-php")
 
 ## Acknowledgements
 * **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
-* **Contributors** - Mandy Pang, MySQL Principal Product Manager,  Priscila Galvao, MySQL Solution Engineering, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
-* **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
+* **Contributors** - Salil Pradhan, MySQL Principal Product Manager,  Nick Mader, MySQL Global Channel Enablement & Strategy Manager
+* **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, Sept 2022

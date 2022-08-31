@@ -49,7 +49,11 @@
             "title": "Lab 7: Use MySQL HeatWave For Development",
             "filename": "../../develop/develop.md"
           }, 
-  
+
+          {
+            "title": "Lab 8: Connect to MySQL HeatWave Using Bastion",
+            "filename": "../../connect-dbs-bastion/connect-dbs-bastion.md"
+          },
           {
               "title": "Need Help?",
               "description": "Solutions to Common Problems and Directions for Receiving Live Help",
