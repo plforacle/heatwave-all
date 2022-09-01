@@ -1,9 +1,10 @@
 # CREATE MYSQL DATABASE SYSTEM AND HEATWAVE CLUSTER
+
 ![INTRO](./images/00_mds_heatwave_2.png " ")
 
 ## Introduction
 
-The required Virtual Cloud Network has been created and configured for this system. You are ready to start the MySQL DB system creation process. You will use a provided object storage link to create the airportdb schema and load data into the new Database.  Finally, you will add a HeatWave Cluster comprise of two or more HeatWave nodes.   
+The required Virtual Cloud Network has been created and configured for this system. You are ready to start the MySQL DB system creation process. You will use a provided object storage link to create the airportdb schema and load data into the new Database.  Finally, you will add a HeatWave Cluster comprise of two or more HeatWave nodes.
 
 _Estimated Time:_ 20 minutes
 
