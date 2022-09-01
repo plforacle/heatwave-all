@@ -72,6 +72,5 @@ In this lab, you will be guided through the following steps:
 
 - **Author** - Perside Foster, MySQL Solution Engineering
 
-- **Contributors** - Salil Pradhan, Principal Product Manager,
-Nick Mader, MySQL Global Channel Enablement & Strategy Manager
+- **Contributors** - Mndy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 - **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022

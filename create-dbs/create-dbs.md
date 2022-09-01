@@ -1,5 +1,4 @@
 # Create MySQL Database HeatWave  and Cluster
-![INTRO](./images/00_mds_heatwave_2.png " ")
 
 ## Introduction
 
@@ -27,70 +26,78 @@ In this lab, you will be guided through the following tasks:
 ## Task 1: Create Virtual Cloud Network
 
 1. Click **Navigation Menu**, **Networking**, then **Virtual Cloud Networks**  
-    ![VCN](./images/03vcn01.png " ")
+    ![VCN](./images/vcn-menu.png "vcn menu ")
 
 2. Click **Start VCN Wizard**
-    ![VCN](./images/03vcn02.png " ")
+    ![VCN](./images/vcn-wizard.png "vcn wizard.png ")
 
 3. Select 'Create VCN with Internet Connectivity'
 
     Click 'Start VCN Wizard'
-    ![VCN](./images/03vcn03.png " ")
+    ![VCN](./images/vcn-wizard-internet.png "vcn wizard internet ")
 
 4. Create a VCN with Internet Connectivity
 
     On Basic Information, complete the following fields:
 
- VCN Name:
-    ```
+    VCN Name:
+
+    ```batch
     <copy>MDS-VCN</copy>
     ```
- Compartment: Select  **(root)**
 
- Your screen should look similar to the following
-    ![VCN](./images/03vcn04.png " ")
+    Compartment: Select  **(root)**
+
+    Your screen should look similar to the following
+    ![VCN](./images/vcn-compartment.png " vcn compartment")
 
 5. Click 'Next' at the bottom of the screen
 
 6. Review Oracle Virtual Cloud Network (VCN), Subnets, and Gateways
 
     Click 'Create' to create the VCN
-    ![VCN](./images/03vcn04-1.png " ")
+    ![VCN](./images/vcn-subset.png "vcn subset ")
 
 7. The Virtual Cloud Network creation is completing
-    ![VCN](./images/03vcn05.png " ")
+    ![VCN](./images/vcn-create.png "vcn create ")
 
 8. Click 'View Virtual Cloud Network' to display the created VCN
-    ![VCN](./images/03vcn06.png " ")
+    ![VCN](./images/vcn-display.png "vcn display ")
 
 9. On MDS-VCN page under 'Subnets in (root) Compartment', click  '**Private Subnet-MDS-VCN**'
-     ![VCN](./images/03vcn07.png " ")
+     ![VCN](./images/vcn-subnet-compartment.png "vcn subnet compartment ")
 
-10.	On Private Subnet-MDS-VCN page under 'Security Lists',  click  '**Security List for Private Subnet-MDS-VCN**'
-    ![VCN](./images/03vcn08.png " ")
+10. On Private Subnet-MDS-VCN page under 'Security Lists',  click  '**Security List for Private Subnet-MDS-VCN**'
+    ![VCN](./images/vcn-securitylist.png "vcn securitylist ")
 
-11.	On Security List for Private Subnet-MDS-VCN page under 'Ingress Rules', click '**Add Ingress Rules**'
-    ![VCN](./images/03vcn09.png " ")
+11. On Security List for Private Subnet-MDS-VCN page under 'Ingress Rules', click '**Add Ingress Rules**'
+    ![VCN](./images/vcn-ingress.png "vcn ingress ")
 
-12.	On Add Ingress Rules page under Ingress Rule 1
+12. On Add Ingress Rules page under Ingress Rule 1
 
- Add an Ingress Rule with Source CIDR
-    ```
+    Add an Ingress Rule with Source CIDR
+
+    ```batch
     <copy>0.0.0.0/0</copy>
     ```
- Destination Port Range
-     ```
+
+    Destination Port Range
+
+     ```batch
     <copy>3306,33060</copy>
      ```
- Description
-     ```
+
+     Description
+
+     ```batch
     <copy>MySQL Port Access</copy>
      ```
- Click 'Add Ingress Rule'
-    ![VCN](./images/03vcn10.png " ")
 
-13.	On Security List for Private Subnet-MDS-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
-    ![VCN](./images/03vcn11.png " ")
+    Click 'Add Ingress Rule'
+    ![VCN](./images/vcn-add-ingress.png "vcn add ingress ")
+
+13. On Security List for Private Subnet-MDS-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
+    ![VCN](./images/vcn-ingres-rule-list.png " vcn ingres rule list")
 
 ## Task 2: Create MySQL Database for HeatWave (DB System) instance with sample data (airportdb)
 
@@ -98,10 +105,10 @@ In this lab, you will be guided through the following tasks:
          Databases
          MySQL
          DB Systems
-    ![MDS](./images/04mysql01.png " ")
+    ![MDS](./images/mysql-menu.png "mysql menu")
 
 2. Click 'Create MySQL DB System'
-    ![MDS](./images/04mysql02.png " ")
+    ![MDS](./images/mysql-create.png "mysql create ")
 
 3. Create MySQL DB System dialog complete the fields in each section
 
@@ -116,29 +123,32 @@ In this lab, you will be guided through the following tasks:
 
 4. Provide basic information for the DB System:
 
- Select Compartment **(root)**
+    Select Compartment **(root)**
 
- Enter Name
-    ```
+    Enter Name
+
+    ```bash
     <copy>MDS-HW</copy>
     ```
- Enter Description
-    ```
+
+    Enter Description
+
+    ```bash
     <copy>MySQL Database Service HeatWave instance</copy>
     ```
 
- Select **HeatWave** to specify a HeatWave DB System
-    ![MDS](./images/04mysql03-3.png " ")
+    Select **HeatWave** to specify a HeatWave DB System
+    ![MDS](./images/mysql-heatwave.png "mysql heatwave ")
 
 5. Create Administrator Credentials
 
- **Enter Username** (write username to notepad for later use)
+    **Enter Username** (write username to notepad for later use)
 
- **Enter Password** (write password to notepad for later use)
+    **Enter Password** (write password to notepad for later use)
 
- **Confirm Password** (value should match password for later use)
+    **Confirm Password** (value should match password for later use)
 
-    ![MDS](./images/04mysql04.png " ")
+    ![MDS](./images/mysql-password.png "mysql password ")
 
 6. On Configure networking, keep the default values
 
@@ -146,7 +156,7 @@ In this lab, you will be guided through the following tasks:
 
     Subnet: **Private Subnet-MDS-VCN (Regional)**
 
-    ![MDS](./images/04mysql05.png " ")
+    ![MDS](./images/mysql-vcn.png "mysql vcn ")
 
 7. On Configure placement under 'Availability Domain'
 
@@ -154,38 +164,40 @@ In this lab, you will be guided through the following tasks:
 
     Do not check 'Choose a Fault Domain' for this DB System.
 
-    ![MDS](./images/04mysql06-3.png " ")
+    ![MDS](./images/mysql-fault-domain.png "mysql fault domain ")
 
 8. On Configure hardware, keep default shape as **MySQL.HeatWave.VM.Standard.E3**
 
     Data Storage Size (GB) Set value to:  **1024**
 
-    ```
+    ```bash
     <copy>1024</copy>
     ```
-    ![MDS](./images/04mysql07-3-100-2.png" ")
+
+    ![MDS](./images/mysql-hardware.png "mysql hardware ")
 
 9. On Configure Backups, disable 'Enable Automatic Backup'
 
-    ![MDS](./images/04mysql08.png " ")
+    ![MDS](./images/mysql-backup.png "mysql backup ")
 
 10. Click on Show Advanced Options
 
 11. Go to the Networking tab, in the Hostname field enter (same as DB System Name):
 
-	```
-	<copy>MDS-HW</copy> 
-	```
+    ```bash
+        <copy>MDS-HW</copy> 
+    ```
 
 12. Select Data Import tab.
 
 13. Use the Image below identify your OCI Region.
 
-    ![MDS](./images/regionSelector.png " ")
+    ![MDS](./images/regionSelector.png "regionSelector ")
 
 14. Click on your localized geographic area
 
-    ## North America (NA)  
+    ## North America (NA)
+
     **Tenancy Regions** Please select the same region that you are creating MDS in  
 
     <details>
@@ -436,24 +448,25 @@ In this lab, you will be guided through the following tasks:
     </details>
 
 15. Your PAR Source URL entry should look like this:
-    ![MDS](./images/04mysql08-2.png " ")
+
+    ![MDS](./images/mysql-link.png "mysql link ")
 
 16. Review **Create MySQL DB System**  Screen
 
-    ![MDS](./images/04mysql09-3.png " ")
+    ![MDS](./images/mysql_create_db.png "mysql create db")
 
     Click the '**Create**' button
 
 17. The New MySQL DB System will be ready to use after a few minutes
 
     The state will be shown as 'Creating' during the creation
-    ![MDS](./images/04mysql10-3.png" ")
+    ![MDS](./images/mysql-create-button.png "mysql create button ")
 
 18. The state 'Active' indicates that the DB System is ready for use
 
     On MDS-HW Page, check the MySQL Endpoint (Private IP Address)
 
-    ![MDS](./images/04mysql11-3.png" ")
+    ![MDS](./images/mysql-create-button.png"mysql create button ")
 
 ## Task 3: Add a HeatWave Cluster to MDS-HW MySQL Database System
 
@@ -462,26 +475,27 @@ In this lab, you will be guided through the following tasks:
     MySQL
     DB Systems
 2. Choose the root Compartment. A list of DB Systems is displayed.
-    ![Connect](./images/10addheat01.png " ")
+    ![Connect](./images/mysql-add-heatwave.png "mysql add heatwave ")
 3. In the list of DB Systems, click the **MDS-HW** system. click **More Action ->  Add HeatWave Cluster**.
-    ![Connect](./images/10addheat02.png " ")
+    ![Connect](./images/mysql-add-heat-vcn.png "mysql add heat vcn ")
 4. On the “Add HeatWave Cluster” dialog, select “MySQL.HeatWave.VM.Standard.E3” shape
 5. Click “Estimate Node Count” button
-    ![Connect](./images/10addheat03.png " ")
+    ![Connect](./images/mysql-add-heat-estimate.png "mysql add heat estimate ")
 6. On the “Estimate Node Count” page, click “Generate Estimate”. This will trigger the auto
 provisioning advisor to sample the data stored in InnoDB and based on machine learning
 algorithm, it will predict the number of nodes needed.
-    ![Connect](./images/10addheat04.png " ")
+    ![Connect](./images/mysql-heat-cluster-estimate.png "mysql heat cluster estimate ")
 7. Once the estimations are calculated, it shows list of database schemas in MySQL node. If you expand the schema and select different tables, you will see the estimated memory required in the Summary box, There is a Load Command (heatwave_load) generated in the text box window, which will change based on the selection of databases/tables
 8. Select the airportdb schema and click “Apply Node Count Estimate” to apply the node count
-    ![Connect](./images/10addheat05.png " ")
+    ![Connect](./images/mysql-heat-apply-estimate.png "mysql heat apply estimate ")
 9. Click “Add HeatWave Cluster” to create the HeatWave cluster
-    ![Connect](./images/10addheat06.png " ")
+    ![Connect](./images/mysql-apply-heat-cluster.png "mysql apply heat cluster ")
 10. HeatWave creation will take about 10 minutes. From the DB display page scroll down to the Resources section. Click the **HeatWave** link. Your completed HeatWave Cluster Information section will look like this:
-    ![Connect](./images/10addheat07.png " ")
+    ![Connect](./images/mysql-heat-cluster-complete.png "mysql heat cluster complete ")
 
 ## Acknowledgements
 
-* **Author** - Perside Foster, MySQL Solution Engineering
-* **Contributors** - Mandy Pang, MySQL Principal Product Manager,  Priscila Galvao, MySQL Solution Engineering, Nick Mader, MySQL Global Channel Enablement & Strategy Manager, Frédéric Descamps, MySQL Community Manager
-* **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
+- **Author** - Perside Foster, MySQL Solution Engineering
+
+- **Contributors** - Mndy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
+- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
