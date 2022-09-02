@@ -80,13 +80,14 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     Enter the following command  
 
-    ```
+    ```bash
     <copy>cat ~/.ssh/id_rsa.pub</copy>
-    ``` 
-    ![CONNECT](./images/cloudshell-cat.png " ") 
+    ```
+
+    ![CONNECT](./images/cloudshell-cat.png "cloudshell cat") 
 
 3. Copy the id_rsa.pub content the notepad
-        
+
     Your notepad should look like this
     ![CONNECT](./images/notepad-rsa-key.png "notepad rsa key ")  
 
@@ -97,27 +98,28 @@ You will need a compute Instance to connect to your brand new MySQL database.
     ![CONNECT](./images/compute-launch.png "compute launch ")
 
 5. On Instances in **(root)** Compartment, click  **Create Instance**
-    ![CONNECT](./images/compute-create.png"compute create")
+    ![CONNECT](./images/compute-create.png "compute create")
 
 6. On Create Compute Instance 
 
     Enter Name
-    ```
+
+    ```bash
     <copy>MDS-Client</copy>
-    ```   
+    ```
 
 7. Make sure **(root)** compartment is selected 
 
 8. On Placement, keep the selected Availability Domain
 
-9. On Image and Shape, keep the selected Image, Oracle Linux 8 
+9. On Image and Shape, keep the selected Image, Oracle Linux 8
 
-      ![CONNECT](./images/05compute03.png " ")  
+      ![CONNECT](./images/compute-oracle-linux.png "compute oracle linux")  
 
 10. Select Instance Shape: VM.Standard.E2.2
 
-      ![CONNECT](./images/compute-shape.png "compute shape")  
-
+      ![CONNECT](./images/compute-shape-select.png "compute shape select") 
+ 
 11. On Networking, make sure '**MDS-VCN**' is selected
 
     'Assign a public IP address' should be set to Yes 
@@ -168,19 +170,20 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
 3. Your notepad should look like the following:
      ![CONNECT](./images/notepad-rsa-key-compute-mds.png "notepad rsa key compute mds")
-    
+
 4. Indicate the location of the private key you created earlier with **MDS-Client**. 
-    
+
     Enter the username **opc** and the Public **IP Address**.
 
     Note: The **MDS-Client**  shows the  Public IP Address as mentioned on TASK 5: #11
-    
+
     (Example: **ssh -i ~/.ssh/id_rsa opc@132.145.170...**) 
 
-    ```
+    ```bash
     <copy>ssh -i ~/.ssh/id_rsa opc@<your_compute_instance_ip></copy>
     ```
-    ![CONNECT](./images/connec-signin.png "connec signin")
+
+    ![CONNECT](./images/connect-signin.png "connect signin")
 
     **Install MySQL Shell on the Compute Instance**
 
@@ -190,20 +193,21 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     **[opc@…]$**
 
-     ```
+     ```bash
     <copy>sudo yum install mysql-shell -y</copy>
     ```
-    ![CONNECT](./images/06connect02-shell.png " ")
+
+    ![CONNECT](./images/install-mysql-shell.png "install mysql shell")
 
    **Connect to MySQL Database Service**
 
 6. From your Compute instance, connect to MDS-HW MySQL using the MySQL Shell client tool. 
-   
+
    The endpoint (IP Address) can be found in your notepad or  the MDS-HW MySQL DB System Details page, under the "Endpoint" "Private IP Address". 
 
     ![CONNECT](./images/connect-shell.png "connect shell")
 
-7.  Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the MDS-HW private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
+7. Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the MDS-HW private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
 
     (Example  **mysqlsh -uadmin -p -h10.0.1..   --sql**)
 
@@ -227,11 +231,11 @@ You may now proceed to the next lab.
 
 ## Learn More
 
-* [Cloud Shell](https://www.oracle.com/devops/cloud-shell/?source=:so:ch:or:awr::::Sc)
+- [Cloud Shell](https://www.oracle.com/devops/cloud-shell/?source=:so:ch:or:awr::::Sc)
 
-* [Virtual Cloud Network](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
+- [Virtual Cloud Network](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
 
-* [OCI Bastion Service ](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Bastion/Tasks/connectingtosessions.htm)
+- [OCI Bastion Service ](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Bastion/Tasks/connectingtosessions.htm)
 
 ## Acknowledgements
 
