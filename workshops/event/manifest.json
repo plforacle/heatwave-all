@@ -34,7 +34,12 @@
               "filename": "../../run-queries/run-queries.md"
           },
           
-  
+          {
+            "title": "Lab 5: Run MySQL HeatWave Autopilot ",
+            "filename": "../../run-autopilot/run-autopilot.md"
+          },
+
+                    
           {
               "title": "Need Help?",
               "description": "Solutions to Common Problems and Directions for Receiving Live Help",
