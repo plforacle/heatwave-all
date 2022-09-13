@@ -205,7 +205,7 @@ In this example, data is assigned to a @row\_input session variable, and the var
 
 ## Task 5: Score your machine learning model to assess its reliability and unload the model
 
-1. Score the model using ML\_SCORE to assess the model's reliability. This example uses the balanced_accuracy metric, which is one of the many scoring metrics supported by HeatWave ML.
+1. Score the model using ML\_SCORE to assess the model's reliability. This example uses the accuracy metric, which is one of the many scoring metrics supported by HeatWave ML.
 
     ```bash
     <copy>CALL sys.ML_SCORE('FLIGHTS_BTS_DELAY.bts_airport_delay_train', 'OPER_CARRIER', @airline_model, 'accuracy', @score);</copy>

@@ -489,7 +489,7 @@ algorithm, it will predict the minimum number of nodes needed.
 8. Select the airportdb schema and click “Apply Node Count Estimate” to apply the node count
     ![Connect](./images/mysql-heat-apply-estimate.png "mysql heat apply estimate ")
 9. **Set Node Count to 2 for this Lab Click** “Add HeatWave Cluster” to create the HeatWave cluster
-    ![Connect](./images/mysql-add-heat-estimate.png "mysql add-heat estimate")
+    ![Connect](./images/mysql-apply-heat-cluster.png "mysql apply heat cluster ")
 10. HeatWave creation will take about 10 minutes. From the DB display page scroll down to the Resources section. Click the **HeatWave** link. Your completed HeatWave Cluster Information section will look like this:
     ![Connect](./images/mysql-heat-cluster-complete.png "mysql heat cluster complete ")
 
