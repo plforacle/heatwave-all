@@ -47,10 +47,11 @@ and explain machine learning models within MySQL HeatWave.
 
 In this lab, you will be guided through the following steps:
 
-- Create SSH Key on Oracle Cloud Infrastructure Cloud Shell
-- Create MySQL Database for HeatWave (DB System) instance with sample data (airportdb)
+- Create MySQL Database for HeatWave (DB System) instance
+- Create SSH Key on Oracle Cloud Infrastructure Cloud Shell 
 - Setup Compute instance
-- Connect to DB System using MySQL Shell through Compute Instance / Cloud Shell
+- Connect to DB System using MySQL Shell through Compute Instance and Cloud Shell 
+- Create and Load sample schema(airportdb) in MySQL Database 
 - Add HeatWave cluster to DB System
 - Load sample data to HeatWave Cluster
 - Run queries in HeatWave and MySQL and see the performance improvement in HeatWave!

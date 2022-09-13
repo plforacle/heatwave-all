@@ -1,4 +1,4 @@
-# CONNECT TO MYSQL HeatWave
+# Connect to MySQL HeatWave and Create and Load airportdb Schema
 
 ## Introduction
 
@@ -8,10 +8,6 @@ Today, you will use the Compute Instance to connect from the browser to a MDS DB
 
 _Estimated Lab Time:_ 20 minutes
 
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:h5ueWMhLH2g)
-
 ### Objectives
 
 In this lab, you will be guided through the following tasks:
@@ -20,6 +16,7 @@ In this lab, you will be guided through the following tasks:
 - Create Compute Instance
 - Setup Compute Instance with MySQL Shell
 - Connect to MySQL DB System
+- Create and Load airportdb Schema
 
 ### Prerequisites
 
@@ -139,7 +136,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![CONNECT](./images/comute-running.png "comute running")
 
-## Task 3: Connect to MySQL Database System
+## Task 3: Connect to MySQL Database System and Create and Load airportdb schema 
 
 1. Copy the public IP address of the active Compute Instance to your notepad
 
@@ -219,7 +216,31 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![CONNECT](./images/connect-myslqsh.png "connect myslqsh")
 
-8. View  the airportdb total records per table in 
+8. Create  and load sample database (airpordb) from object storage
+ 
+    a. 
+
+    ```bash
+        <copy>\js</copy>
+    ```
+
+    b. 
+
+    ```bash
+    <copy>util.loadDump("https://objectstorage.us-phoenix-1.oraclecloud.com/p/Erj7Kn9oKIK2FxywwzTfAJIthV5_9A_JCy8EftK0Pe9fEjVGnpV3fGRAQijZnzEI/n/idazzjlcjqzj/b/airportdball/o/airportdball/@.manifest.json", {progressFile: "progress.json"})</copy>
+    ```
+
+    **Note** it takse about 12 minutes to create and load the airportbb schema
+
+9. View  the airportdb total records per table in
+
+    a. 
+
+    ```bash
+        <copy>\sql</copy>
+    ```
+
+    b. 
 
     ```bash
     <copy>SELECT table_name, table_rows FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'airportdb';</copy>
@@ -229,17 +250,9 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
 You may now proceed to the next lab.
 
-## Learn More
-
-- [Cloud Shell](https://www.oracle.com/devops/cloud-shell/?source=:so:ch:or:awr::::Sc)
-
-- [Virtual Cloud Network](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
-
-- [OCI Bastion Service ](https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Bastion/Tasks/connectingtosessions.htm)
-
 ## Acknowledgements
 
 - **Author** - Perside Foster, MySQL Solution Engineering
 
-- **Contributors** - Mndy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
+- **Contributors** - Mandy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 - **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022

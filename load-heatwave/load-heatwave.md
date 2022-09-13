@@ -8,9 +8,6 @@ A HeatWave cluster comprise of a MySQL DB System node and two or more HeatWave n
 
 _Estimated Time:_ 10 minutes
 
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:OzqCt3XATto)
 
 ### Objectives
 

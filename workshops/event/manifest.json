@@ -21,7 +21,7 @@
         },
 
         {
-          "title": "Lab 2: Connect to MySQL HeatWave",
+          "title": "Lab 2: Connect to MySQL HeatWave and Create and Load airportdb Schema",
           "filename": "../../connect-dbs/connect-dbs.md"
         },
            

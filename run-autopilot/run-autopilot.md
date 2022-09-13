@@ -1,7 +1,5 @@
 # Run MySQL HeatWave Autopilot
 
-![INTRO](./images/00_mds_heatwave_2.png " ")
-
 ## Introduction
 
 MySQL Autopilot provides machine learning automation that improves performance, scalability, and ease of use of HeatWave. It automates the database lifecycle operations including provisioning, data loading, query processing, and error handling. For example:
@@ -11,9 +9,6 @@ In this lab, you will learn how to use two of the MySQL Autopilot advisors (Auto
 
 _Estimated Time:_ 10 minutes
 
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:aC2R0qI1Dx8)
 
 ### Objectives
 
