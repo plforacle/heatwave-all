@@ -16,44 +16,56 @@
  
 
         {
-            "title": "Lab 1: Create MySQL HeatWave and Cluster",
-            "filename": "../../create-dbs/create-dbs.md"
+          "title": "Lab 1: Create Virtual Cloud NetWork",
+          "filename": "../../create-vcn/create-vcn.md"
         },
 
         {
-          "title": "Lab 2: Connect to MySQL HeatWave and Create and Load airportdb Schema",
+            "title": "Lab 2: Create MySQL HeatWave Databases",
+            "filename": "../../create-dbs-all/create-dbs-all.md"
+        },
+
+        {
+          "title": "Lab 3: Access MySQL HeatWave Databases",
+          "filename": "../../access-mds-sa-ha/access-mds-sa-ha.md"
+        },
+
+        {
+          "title": "Lab 4: Connect to MySQL HeatWave and Create and Load airportdb Schema",
           "filename": "../../connect-dbs/connect-dbs.md"
         },
            
         {
-            "title": "Lab 3: Load MySQL HeatWave Cluster",
+            "title": "Lab 5: Load MySQL HeatWave Cluster",
             "filename": "../../load-heatwave/load-heatwave.md"
         },
         
         {
-            "title": "Lab 4: Run Queries with MySQL Shell  ",
+            "title": "Lab 6: Run Queries with MySQL Shell  ",
             "filename": "../../run-queries/run-queries.md"
         },
         
         {
-            "title": "Lab 5: Run MySQL HeatWave Autopilot",
+            "title": "Lab 7: Run MySQL HeatWave Autopilot",
             "filename": "../../run-autopilot/run-autopilot.md"
         },
         
         {
-          "title": "Lab 6: Build HeatWave ML with SQL",
+          "title": "Lab 8: Build HeatWave ML with SQL",
           "filename": "../../do-heatwave-ml/do-heatwave-ml.md"
         },
 
+
         {
-          "title": "Lab 7: Use MySQL HeatWave For Development",
+          "title": "Lab 9: Develop MySQL HeatWave APEX Apps",
+          "filename": "../../apex-heatwave/apex-heatwave.md"
+        },
+
+        {
+          "title": "Lab 10: Develop MySQL HeatWave PHP Apps",
           "filename": "../../develop/develop.md"
         }, 
 
-        {
-          "title": "Lab 8: Connect to MySQL HeatWave Using Bastion",
-          "filename": "../../connect-dbs-bastion/connect-dbs-bastion.md"
-        },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
