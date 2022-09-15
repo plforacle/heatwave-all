@@ -14,7 +14,8 @@ _Estimated Time:_ 15 minutes
 In this lab, you will be guided through the following tasks:
 
 
-- Create Virtual Cloud Network 
+- Create Compartment
+- Create Virtual Cloud Network  
 - Configure security list to allow MySQL incoming connections
 - Configure security list to allow HTTP incoming connections
 
@@ -27,7 +28,17 @@ In this lab, you will be guided through the following tasks:
 
 ![INTRO](./images/oci-dashboard.png " ") 
 
-## Task 1: Create Virtual Cloud Network 
+## Task 1: Create a Compartment
+
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
+
+2. On the Compartments page, click **Create Compartment**.
+
+    **Note:** Two Compartments, _Oracle Account Name_ (root) and a compartment for PaaS, were automatically created by the Oracle Cloud.
+
+3. In the Create Compartment dialog box, in the **NAME** field, enter **MDS**, and then enter a Description enter **MDS**, select the **Parent Compartment**, and click **Create Compartment**.
+
+## Task 2: Create Virtual Cloud Network 
 
 1. Click Navigation Menu   
     Select Networking  
@@ -68,7 +79,7 @@ In this lab, you will be guided through the following tasks:
 8. Click 'View Virtual Cloud Network' to display the created VCN
     ![VCN](./images/03vcn06.png " ")
 
-## Task 2: Configure security list to allow MySQL incoming connections
+## Task 3: Configure security list to allow MySQL incoming connections
 
 1. On MDS-VCN page under 'Subnets in (root) Compartment', click  '**Private Subnet-MDS-VCN**' 
      ![VCN](./images/03vcn07.png " ")
@@ -99,7 +110,7 @@ Description
 5.	On Security List for Private Subnet-MDS-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
     ![VCN](./images/03vcn11.png " ")
 
-## Task 3: Configure security list to allow HTTP incoming connections
+## Task 4: Configure security list to allow HTTP incoming connections
 
 1. Navigation Menu > Networking > Virtual Cloud Networks
 
@@ -134,4 +145,4 @@ Description
 - **Author** - Perside Foster, MySQL Solution Engineering
 
 - **Contributors** - Mandy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
-- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
+- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, Oct 2022

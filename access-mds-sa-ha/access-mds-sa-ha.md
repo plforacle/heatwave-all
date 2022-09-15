@@ -16,17 +16,15 @@ _Estimated Lab Time:_ 30 minutes
 - Some Experience with MySQL Shell
 - Must Complete Lab 3
 
-## Task 1: Oracle Database Development Tools Connections
+## Task 1: Set up Oracle Database Development Tools Connections
 
 In this lab, you will be guided through the following tasks:
 
 - Setup  Vault
 - Setup Secret
+- Create private endpoin
 - Create Connection
-- Create Bastion
-- Connect to MySQL Standalone DB System
-- Connect to MySQL Standalone HA System
-- Switchover and Connect to MySQL High Availability DB System
+- Create Bastion 
 
 1. USe Database Tools SQL Worksheet
 
@@ -91,12 +89,35 @@ In this lab, you will be guided through the following tasks:
       ````
       <copy>SELECT country_id, country from country WHERE country = 'Afghanistan' OR 'Bangladesh' OR 'China';</copy>
       ```` 
-   f. Type the following command to exit MySQL:
-      ````
-      <copy>\q</copy>
-      ````
 
-## Task 5: Switchover MySQL Database  High Availability
+## Task 2: Convert Standalone database to High Availability database
+
+Use the Console to enable or disable high availability on a DB system
+   1. Open the navigation menu. Under Databases >MySQL > DB Systems
+    ![MDS](./images/04mysql01.png " ")
+
+   2. Click the **MDS-SA** Standalone Dabase link
+
+   3. Click the **More Actions** button
+
+   4. Select **Enable high availability**
+      ![MDS](./images/en-ha.png " ")  
+
+   5. Click the **Enable** button
+         ![MDS](./images/ha-enable.png " ")  
+
+   6. Select the HA-compatible configuration **MySQL.VM.Standard.E3.1.8GB.HA** and click Enable.
+            ![MDS](./images/ha-select-config.png " ")     
+
+      The configuration is updating. The DB System  will enter the UPDATING state. 
+
+      The selected configuration will be applied to the DB System.
+
+      The secondary instances will be  cloned from the primary instance. 
+
+**This conversion will take a while Go to the next Lab and come back in 15 minutes** 
+
+## Task 3: Switchover MySQL Database  High Availability
 
 To switch from the current primary instance to one of the secondary instances, do the following:
 
