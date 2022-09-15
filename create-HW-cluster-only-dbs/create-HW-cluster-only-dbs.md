@@ -21,6 +21,8 @@ In this lab, you will be guided through the following tasks:
 
 ## Task 1: Create Virtual Cloud Network
 
+**Note** PLease  Skip Task 1 if you have already created  the **MDS-VCN**
+
 1. Click **Navigation Menu**, **Networking**, then **Virtual Cloud Networks**  
     ![VCN](./images/vcn-menu.png "vcn menu ")
 
