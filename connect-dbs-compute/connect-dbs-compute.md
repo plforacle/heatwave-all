@@ -1,4 +1,4 @@
-# Connect to MySQL HeatWave and Create and Load airportdb Schema
+# Connect to MySQL HeatWave With Compute and Create and Load airportdb Schema
 
 ## Introduction
 

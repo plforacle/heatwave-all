@@ -34,9 +34,10 @@
           "title": "Lab 4:Created HeatWave DB and Cluster",
           "filename": "../../create-HW-cluster-only-dbs/create-HW-cluster-only-dbs.md"
         },
+        
         {
-          "title": "Lab 5: Connect to MySQL HeatWave and Create and Load airportdb Schema",
-          "filename": "../../connect-dbs/connect-dbs.md"
+          "title": "Lab 5: Connect to MySQL HeatWave with Compute and Create and Load airportdb Schema",
+          "filename": "../../connect-dbs-compute/connect-dbs-compute.md"
         },
            
         {
