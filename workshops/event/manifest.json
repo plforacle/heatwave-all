@@ -14,59 +14,43 @@
           "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/event-register-free-tier-account.md"
         },
  
-
         {
-          "title": "Lab 1: Create Virtual Cloud NetWork",
-          "filename": "../../create-vcn/create-vcn.md"
-        },
-
-        {
-            "title": "Lab 2: Create MySQL HeatWave Databases",
-            "filename": "../../create-dbs-all/create-dbs-all.md"
-        },
-
-        {
-          "title": "Lab 3: Access MySQL HeatWave Databases",
-          "filename": "../../access-mds-sa-ha/access-mds-sa-ha.md"
-        },
-        
-        {
-          "title": "Lab 4:Created HeatWave DB and Cluster",
+          "title": "Lab 1:Created HeatWave DB and Cluster",
           "filename": "../../create-HW-cluster-only-dbs/create-HW-cluster-only-dbs.md"
         },
         {
-          "title": "Lab 5: Connect to MySQL HeatWave with Compute and Create and Load airportdb Schema",
+          "title": "Lab 2: Connect to MySQL HeatWave with Compute and Create and Load airportdb Schema",
           "filename": "../../connect-dbs-compute/connect-dbs-compute.md"
         },
            
         {
-            "title": "Lab 6: Load MySQL HeatWave Cluster",
+            "title": "Lab 3: Load MySQL HeatWave Cluster",
             "filename": "../../load-heatwave/load-heatwave.md"
         },
         
         {
-            "title": "Lab 7: Run Queries with MySQL Shell  ",
+            "title": "Lab 4: Run Queries with MySQL Shell  ",
             "filename": "../../run-queries/run-queries.md"
         },
         
         {
-            "title": "Lab 8: Run MySQL HeatWave Autopilot",
+            "title": "Lab 5: Run MySQL HeatWave Autopilot",
             "filename": "../../run-autopilot/run-autopilot.md"
         },
         
         {
-          "title": "Lab 9: Build HeatWave ML with SQL",
+          "title": "Lab 6: Build HeatWave ML with SQL",
           "filename": "../../do-heatwave-ml/do-heatwave-ml.md"
         },
 
 
         {
-          "title": "Lab 10: Develop MySQL HeatWave APEX Apps",
+          "title": "Lab 7: Develop MySQL HeatWave APEX Apps",
           "filename": "../../apex-heatwave/apex-heatwave.md"
         },
 
         {
-          "title": "Lab 11: Develop MySQL HeatWave PHP Apps",
+          "title": "Lab 8: Develop MySQL HeatWave PHP Apps",
           "filename": "../../develop/develop.md"
         }, 
 

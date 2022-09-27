@@ -40,9 +40,6 @@ and explain machine learning models within MySQL HeatWave.
 **Lab Setup**
   ![INTRO](./images/heatwave-ML-architecture-compute.png "heatwave architecture ")
 
-**Introduction to HeatWave**
-  [](youtube:6nsgwclsnaM)
-
 ### Objectives
 
 In this lab, you will be guided through the following steps:
