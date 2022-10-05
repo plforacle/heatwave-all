@@ -1,5 +1,5 @@
 # Use MySQL HeatWave For Development  
-
+    
 ## Introduction
 
 MySQL HeatWave can easily be used for development tasks with existing Oracle services, such as Oracle Cloud Analytics. New applications can also be created with the LAMP or other software stacks.
@@ -423,15 +423,15 @@ LIMIT 10;</copy>
 2. Download the airport application zip file
 
     ```bash
-    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/l0xSBnkZgPxLi2_me6MekElw4i2SrqnbY8-hVB9jl5JfB1n54MLnbMM5EZH1lHGz/n/id6iswug0zca/b/airportapp/o/_01_airpordb_ml_web.zip</copy>
+    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/GpSI2eEwfsNM2ogTncD7WQkTlnLh-jAo7V3YgrkUQYuKfDfzRe1S-40d5Al9lMax/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp.zip</copy>
     ```
 
     ```bash
-    <copy>sudo unzip _01_airpordb_ml_web.zip</copy>
+    <copy>sudo unzip airportapp.zip</copy>
     ```
 
     ```bash
-    <copy>cd /var/www/html/_01_airpordb_ml_web</copy>
+    <copy>cd /var/www/html/airportapp</copy>
     ```
 
     Replace the database IP in config.php file with your heatwave database IP and save the file.
@@ -442,7 +442,7 @@ LIMIT 10;</copy>
 
     run the application as follows:
 
-    computeIP/_01_airpordb_ml_web/ 
+    computeIP/airportapp/ 
 
     ![MDS](./images/airport_web.png "airport-web-php")
 
