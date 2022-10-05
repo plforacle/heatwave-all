@@ -1,5 +1,5 @@
 # Use MySQL HeatWave For Development  
-    
+
 ## Introduction
 
 MySQL HeatWave can easily be used for development tasks with existing Oracle services, such as Oracle Cloud Analytics. New applications can also be created with the LAMP or other software stacks.
@@ -12,9 +12,8 @@ _Estimated Lab Time:_ 40 minutes
 
 In this lab, you will be guided through the following tasks:
 
-- Connect to HeatWave using Workbench
 - Install Apache and PHP and create PHP / MYSQL Connect Application
-- Create Oracle Analytics Cloud and connect to MySQL HeatWave
+- Create  
 
 ### Prerequisites
 
@@ -22,31 +21,18 @@ In this lab, you will be guided through the following tasks:
 - Some Experience with MySQL Shell
 - Completed Lab 5
 
-## **TASK 1:**  Connect to HeatWave using Workbench
-
-Estimated Time: 5 minutes
-
-1. At this point, you can also use MySQL Workbench from your local machine to connect to the MySQL endpoint using your new Compute instance as a jump box.
-
-2. In your pre-installed MySQL Workbench, configure a connection using the method "Standard TCP/IP over SSH" and use the credentials of the Compute instance for SSH.
-
-    **MySQL Workbench Configuration for MDS HeatWAve**
-    ![MDS](./images/13workbench01.png " ")
-
-    **MySQL Workbench Use  for MDS HeatWAve**
-    ![MDS](./images/13workbench02.png " ")
-
-## **TASK 2:** Install and test PHP MySQL Application
+## **TASK 1:** Install and test PHP MySQL Application
 
 Estimated Time: 20 minutes
 
 **Subtask 1 – Install App Server (APACHE)**
 
-1.	If not already connected with SSH, on Command Line, connect to the Compute instance using SSH ... be sure replace the  "private key file"  and the "new compute instance ip"
+1. If not already connected with SSH, on Command Line, connect to the Compute instance using SSH ... be sure replace the  "private key file"  and the "new compute instance ip"
 
      ````
     <copy>ssh -i private_key_file opc@new_compute_instance_ip</copy>
      ````
+
 2.	Install app server
 
     a. Install Apache
@@ -128,9 +114,9 @@ phpinfo();
 
    Example: http://129.213.167.../info.php
 
-**Subtask 3 – Create MDS / PHP connect app**
+## **TASK 2:** Subtask 3 – Create MDS / PHP connect app
 
-1.	Security update"   set SELinux to allow Apache to connect to MySQL
+1. Security update"   set SELinux to allow Apache to connect to MySQL
 
     ````
     <copy> sudo setsebool -P httpd_can_network_connect 1 </copy>
@@ -213,7 +199,7 @@ if ($stmt = $link->prepare($query)) {
 </copy>
     ````
 
-6.	From your local  machine connect to dbhwtest.php
+6. From your local  machine connect to dbhwtest.php
 
     Example: http://129.213.167..../dbtest.php  
 
@@ -236,7 +222,7 @@ if ($stmt = $link->prepare($query)) {
 
 4. copy all of the content of dbchart.php file from your local machine
     - add the content to the mydbchart.php file that you are  creating
-    
+
         ![MDS](./images/dbchart-select-all.png " ")
     - Remember to replace the IP daadress,username, and password (lines 2 and 98 )
         - $con = mysqli_connect('30.0...','admin','Welcome#123','airportdb');
@@ -250,169 +236,7 @@ if ($stmt = $link->prepare($query)) {
     Example: http://129.213.167..../mydbchart.php
     ![MDS](./images/mydbchart-out.png " ")
 
-## **TASK 4:**  Create an Oracle Analytic Cloud
-
-Estimated Time: 40 minutes minutes intallation time
-
-NOTE:   the following exercise is quite complicated. To learn how to use OAC go to the following document:
-Analytics - https://docs.oracle.com/en/cloud/paas/analytics-cloud/tutorials.html
-
-In order to build analytics dashboard using OAC on MDS HeatWave, we need to do the following
-1.	Create a user account for OAC to MDS
-2.	Provision an OAC instance
-3.	Build OAC project
-
-**Subtask 1 - Create a user account for OAC to MDS**
-1.	If not already connected with SSH, on Command Line, connect to the Compute instance using SSH
-
-    ````
-    <copy>ssh -i <private_key_file> opc@<new_compute_instance_ip></copy>
-    ````
-2.	On command Line, connect to MySQL using the MySQL Shell client tool
-
-    ````
-    <copy>mysqlsh -uadmin -p -h10.0.1..</copy>
-    ````
-3.	Change the MySQL Shell execution mode to SQL
-
-    ````
-    <copy>\sql</copy>
-    ````
-4. Create user oacadmin
-
-    ````
-    <copy>CREATE USER 'oacadmin'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome#123';</copy>
-    ````
-    ````
-    <copy>GRANT all privileges on airportdb.* to oacadmin;</copy>
-    ````
-    ````
-    <copy>exit;</copy>
-    ````
-
-**Subtask 2 - Provision an OAC instance**
-1.	From the OCI console, navigate to Analytics & AI-> Analytics Clouds
- ![MDS](./images/15oac01.png " ")
-
-2. Click Create Instance
- ![MDS](./images/15oac02.png " ")
-
-3.	On the Create Analytics Instance enter the required information as shown below
-
-Name:
-
-````
-    <copy>mdsoac</copy>
-````
-
-Description:
-
-````
-    <copy>Oracle Analytics Cloud HeatWave Test</copy>
-````
-Capacity: select **OCPU** and select **4**
-
-License Type: select **License Included**
-
-Click the **Create** button
-
- ![MDS](./images/15oac03.png " ")
-
-4.	Wait 30 minutes for OAC instance creation to complete.
-
-![MDS](./images/15oac04.png " ")
-
-5.	Go down to the resources page and click on the **Configure Private Access Channel**  button
-
-6.	Click the create Private Access Channel button
-
-7.	On the create Private Access Channel page enter the following:
-
-Name:
-
-````
-    <copy>mdsoacpac</copy>
-````
-DNS Zones:
-**Check Virtual Cloud Network's domain name as DNS zone (mdsvcn.oraclevcn.com)**
-
-Description:
-
-````
-    <copy>Testing</copy>
-````
-**Remove second  DNS Zone entry**
-
-8.	Click the **Create** button
-![MDS](./images/15oac05.png " ")
-
-9.	Wait 30 minutes for the process to finish, then continue to Subtask 3
-![MDS](./images/15oac06.png " ")
-
-
-**Subtask 3 - Get HeatWave DB Hostname **
-
-1. Before starting go to Menu Databases > DB Systems
-
-2. Select HeatWave database: MDS-HW  
-
-3. Go to Resources and click on the Endpoinst Link
-![MDS](./images/15oac10.png " ")
-
-4. Save the Hostname for use with OAC
-
-Example : **mdshw.sub09012.....mdsvcn.oraclevcn.com**
-
-5. Continue to Subtask 4
-
-**Subtask 4 - Build OAC Dashboard**
-1.	Navigate to hamburger->Analytics->Analytics Clouds
-
-2.	Select the OAC instance you provisioned to access the OAC console by clicking on Analytics Home Page
-![MDS](./images/15oac07.png " ")
-
-3.	Create a Connection to HeatWave to build a dashboard
-![MDS](./images/15oac08.png " ")
-
-4.	Search for mysql and select mysql as the database
-![MDS](./images/15oac09.png " ")
-
-5.	Specify the connections details
-Specify the hostname of MDS in FQDN such as mysql-xxx.oraclevpn.com and be sure to use the oacadmin mysql user and password Welcome#123
-6.	Next build the dashboard on MDS HeatWave by selecting Create->Data Set
-7.	Select the MySQL Connection created earlier
-8.	For Add Data Set name to customer_nations
-9.	Select airportdb database
-10. Find per-company average age of passengers from Switzerland, Italy and France. Click on the “Enter SQL and type in the following sql statement:
-
-    ````
-    <copy> SELECT
-    airline.airlinename,
-    AVG(datediff(departure,birthdate)/365.25) as avg_age,
-    count(*) as nbpeople
-FROM
-    booking, flight, airline, passengerdetails
-WHERE
-    booking.flight_id=flight.flight_id AND
-    airline.airline_id=flight.airline_id AND
-    booking.passenger_id=passengerdetails.passenger_id AND
-    country IN ("SWITZERLAND", "FRANCE", "ITALY")
-GROUP BY
-    airline.airlinename
-ORDER BY
-    airline.airlinename, avg_age
-LIMIT 10;</copy>
-    ````
-
-11.	Click the blue Add button
-12.	On new display page click on the Create Project button
-13.	On new display page  click on the graph icon, go down the side and select the map icon. Drag the icon to the middle of the page.
-14.	Click the dataset icon and move the nbpeople field to size and airlinename field to Category
-15.	Click on the bottom + sign to add Canvas 2 and drag the bar icon to the middle of the page
-16.	Click the dataset icon and move the nbpeople field to Y-axis and airlinename field to Category
-17.	Set project name to customernationsbargraph
-
-## TASK 5: Create HeatWave ML Web App
+## TASK 4: Create HeatWave ML Web App
 
 1. Go to the development folder
 
@@ -442,7 +266,7 @@ LIMIT 10;</copy>
 
     run the application as follows:
 
-    computeIP/airportapp/ 
+    computeIP/airportapp/
 
     ![MDS](./images/airport_web.png "airport-web-php")
 
