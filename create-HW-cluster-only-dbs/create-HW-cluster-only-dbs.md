@@ -10,7 +10,6 @@ _Estimated Time:_ 20 minutes
 
 In this lab, you will be guided through the following tasks:
 
-- Create Virtual Cloud Network
 - Create MySQL Database for HeatWave (DB System)
 - Add a HeatWave Cluster to MySQL Database System
 
@@ -19,85 +18,7 @@ In this lab, you will be guided through the following tasks:
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with MySQL Shell
 
-## Task 1: Create Virtual Cloud Network
-
-**Note** PLease  Skip Task 1 if you have already created  the **MDS-VCN**
-
-1. Click **Navigation Menu**, **Networking**, then **Virtual Cloud Networks**  
-    ![VCN](./images/vcn-menu.png "vcn menu ")
-
-2. Click **Start VCN Wizard**
-    ![VCN](./images/vcn-wizard.png "vcn wizard.png ")
-
-3. Select 'Create VCN with Internet Connectivity'
-
-    Click 'Start VCN Wizard'
-    ![VCN](./images/vcn-wizard-internet.png "vcn wizard internet ")
-
-4. Create a VCN with Internet Connectivity
-
-    On Basic Information, complete the following fields:
-
-    VCN Name:
-
-    ```batch
-    <copy>MDS-VCN</copy>
-    ```
-
-    Compartment: Select  **(root)**
-
-    Your screen should look similar to the following
-    ![VCN](./images/vcn-compartment.png " vcn compartment")
-
-5. Click 'Next' at the bottom of the screen
-
-6. Review Oracle Virtual Cloud Network (VCN), Subnets, and Gateways
-
-    Click 'Create' to create the VCN
-    ![VCN](./images/vcn-subset.png "vcn subset ")
-
-7. The Virtual Cloud Network creation is completing
-    ![VCN](./images/vcn-create.png "vcn create ")
-
-8. Click 'View Virtual Cloud Network' to display the created VCN
-    ![VCN](./images/vcn-display.png "vcn display ")
-
-9. On MDS-VCN page under 'Subnets in (root) Compartment', click  '**Private Subnet-MDS-VCN**'
-     ![VCN](./images/vcn-subnet-compartment.png "vcn subnet compartment ")
-
-10. On Private Subnet-MDS-VCN page under 'Security Lists',  click  '**Security List for Private Subnet-MDS-VCN**'
-    ![VCN](./images/vcn-securitylist.png "vcn securitylist ")
-
-11. On Security List for Private Subnet-MDS-VCN page under 'Ingress Rules', click '**Add Ingress Rules**'
-    ![VCN](./images/vcn-ingress.png "vcn ingress ")
-
-12. On Add Ingress Rules page under Ingress Rule 1
-
-    Add an Ingress Rule with Source CIDR
-
-    ```batch
-    <copy>0.0.0.0/0</copy>
-    ```
-
-    Destination Port Range
-
-     ```batch
-    <copy>3306,33060</copy>
-     ```
-
-     Description
-
-     ```batch
-    <copy>MySQL Port Access</copy>
-     ```
-
-    Click 'Add Ingress Rule'
-    ![VCN](./images/vcn-add-ingress.png "vcn add ingress ")
-
-13. On Security List for Private Subnet-MDS-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
-    ![VCN](./images/vcn-ingres-rule-list.png " vcn ingres rule list")
-
-## Task 2: Create MySQL Database for HeatWave (DB System
+## Task 1: Create MySQL Database for HeatWave (DB System
 
 1. Go to Navigation Menu
          Databases
@@ -203,7 +124,7 @@ In this lab, you will be guided through the following tasks:
 
     ![MDS](./images/mysql-create-button.png"mysql create button ")
 
-## Task 3: Add a HeatWave Cluster to MDS-HW MySQL Database System
+## Task 2: Add a HeatWave Cluster to MDS-HW MySQL Database System
 
 1. Open the navigation menu  
     Databases
