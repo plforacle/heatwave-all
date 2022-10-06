@@ -244,29 +244,39 @@ if ($stmt = $link->prepare($query)) {
     <copy>cd /var/www/html</copy>
     ```
 
-2. Download the airport application zip file
+2. Create application folder 
 
     ```bash
-    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/GpSI2eEwfsNM2ogTncD7WQkTlnLh-jAo7V3YgrkUQYuKfDfzRe1S-40d5Al9lMax/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp.zip</copy>
+    <copy>sudo mkdir airportapp</copy>
     ```
 
-    ```bash
-    <copy>sudo unzip airportapp.zip</copy>
-    ```
+3. Change to application folder 
 
     ```bash
     <copy>cd /var/www/html/airportapp</copy>
     ```
 
-    Replace the database IP in config.php file with your heatwave database IP and save the file.
+4. Download application code
+
+    ```bash
+    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/GpSI2eEwfsNM2ogTncD7WQkTlnLh-jAo7V3YgrkUQYuKfDfzRe1S-40d5Al9lMax/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp.zip</copy>
+    ```
+
+5. unzip Application code
+
+    ```bash
+    <copy>sudo unzip airportapp.zip</copy>
+    ```
+
+6. Replace the database IP in config.php file with your heatwave database IP and save the file.
 
     ```bash
     <copy>sudo nano config.php</copy>
     ```
 
-    run the application as follows:
+7. Run the application as follows:
 
-    computeIP/airportapp/
+    computeIP/airportapp/eureka_index.php
 
     ![MDS](./images/airport_web.png "airport-web-php")
 
