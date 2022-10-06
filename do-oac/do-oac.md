@@ -144,8 +144,8 @@ ORDER BY
     airline.airlinename, avg_age
 LIMIT 10;</copy>
     ````
-11. Click the blue Add button
-12. On new display page click on the Create Project button
+11. Click the blue Add button and save
+12. On new display page click on the Create workbook button
 13. On new display page  click on the graph icon, go down the side and select the map icon. Drag the icon to the middle of the page.
 14. Click the dataset icon and move the nbpeople field to size and airlinename field to Category
 15. Click on the bottom + sign to add Canvas 2 and drag the bar icon to the middle of the page
