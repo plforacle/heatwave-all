@@ -71,11 +71,12 @@ In this lab, you will be guided through the following task:
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 </copy>
     ```
-    d. Load data into train table :
+    d. Load data into train table : 
+    [BTS raw data origin] (https://www.bts.gov/topics/airlines-and-airports/june-2022-regularly-scheduled-flights-more-50-delayed-arrivals-more-30)
 
     ```bash
     <copy>INSERT INTO  FLIGHTS_BTS_DELAY.bts_airport_delay_train 
-SELECT OPER_CARRIER, bts_raw_data.MONTH, 
+SELECT OPER_CARRIER, bts_raw_data.MONTH,
 ORIGIN_AIRPORT,  SCHEDULED_DEPT_TIME, AVG_MINUTES_LATE
 from  airportdb.bts_raw_data where id >= 1001;</copy>
     ```
