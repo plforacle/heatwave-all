@@ -227,7 +227,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     b. 
 
     ```bash
-    <copy>util.loadDump("https://objectstorage.us-phoenix-1.oraclecloud.com/p/Erj7Kn9oKIK2FxywwzTfAJIthV5_9A_JCy8EftK0Pe9fEjVGnpV3fGRAQijZnzEI/n/idazzjlcjqzj/b/airportdball/o/airportdball/@.manifest.json", {progressFile: "progress.json"})</copy>
+    <copy>util.loadDump("https://objectstorage.us-ashburn-1.oraclecloud.com/p/yXOA3Kwid4uG0oHvHMufbK3cSESmQlU6-0bVB_1vQ8VxR0ggB1m-nDYYOXXy0O5W/n/idazzjlcjqzj/b/airportdb-bucket-112312031/o/airportdb_all/", {progressFile: "progress.json"})</copy>
     ```
 
     **Note** it takse about 12 minutes to create and load the airportbb schema
