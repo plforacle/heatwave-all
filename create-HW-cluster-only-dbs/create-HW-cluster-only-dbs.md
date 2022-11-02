@@ -1,8 +1,8 @@
-# Create MySQL Database HeatWave  and Cluster
+# Create MySQL Database HeatWave Airport Sample database and Cluster
 
 ## Introduction
 
-In this lab, you will create and configure a MySQL DB System  Finally you will add a HeatWave Cluster comprise of two or more HeatWave nodes.  
+In this lab, you will create, configure, and load a MySQL DB System  Finally you will add a HeatWave Cluster comprise of two or more HeatWave nodes.  
 
 _Estimated Time:_ 20 minutes
 
@@ -10,13 +10,14 @@ _Estimated Time:_ 20 minutes
 
 In this lab, you will be guided through the following tasks:
 
-- Create MySQL Database for HeatWave (DB System)
+- Create MySQL Database for HeatWave (DB System) and Load sample database
 - Add a HeatWave Cluster to MySQL Database System
 
 ### Prerequisites
 
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with MySQL Shell
+- Must Complete Lab 1
 
 ## Task 1: Create MySQL Database for HeatWave (DB System
 
@@ -106,19 +107,29 @@ In this lab, you will be guided through the following tasks:
     ```bash
         <copy>MDS-HW</copy> 
     ```
+12. Go to the Data Import tab - Use the Data Import tab of the Create DB System panel to import data from a MySQL Shell dump in an Object Storage bucket.
 
-12. Review **Create MySQL DB System**  Screen
+13. Click here to create a PAR URL for an existing bucket: (Optional) Click the link to create a PAR URL for an existing bucket, and provide the following information:
+
+14. Select a bucket in CompartmentName: Select the Object Storage bucket that contains your dump.
+15. Select the prefix: Select the prefix from the list of valid prefixes.
+16. Create and set PAR URL: Click the option to generate the PAR URL and add it to the PAR Source URL option.
+17. Your PAR Source URL entry should look like this:
+
+    ![mysql PARA link ](./images/mysql-link.png "mysql link ")
+
+18. Review **Create MySQL DB System**  Screen
 
     ![MDS](./images/mysql_create_db.png "mysql create db")
 
     Click the '**Create**' button
 
-13. The New MySQL DB System will be ready to use after a few minutes
+19. The New MySQL DB System will be ready to use after a few minutes
 
     The state will be shown as 'Creating' during the creation
     ![MDS](./images/mysql-create-button.png "mysql create button ")
 
-14. The state 'Active' indicates that the DB System is ready for use
+20. The state 'Active' indicates that the DB System is ready for use
 
     On MDS-HW Page, check the MySQL Endpoint (Private IP Address)
 

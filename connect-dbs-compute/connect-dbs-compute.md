@@ -1,4 +1,4 @@
-# Connect to MySQL HeatWave With Compute and Create and Load airportdb Schema
+# Connect to MySQL HeatWave With Compute 
 
 ## Introduction
 
@@ -16,13 +16,12 @@ In this lab, you will be guided through the following tasks:
 - Create Compute Instance
 - Setup Compute Instance with MySQL Shell
 - Connect to MySQL DB System
-- Create and Load airportdb Schema
 
 ### Prerequisites
 
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with MySQL Shell
-- Must Complete Lab 1
+- Must Complete Lab 2
 
 ## Task 1: Create SSH Key on OCI Cloud Shell
 
@@ -216,23 +215,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![CONNECT](./images/connect-myslqsh.png "connect myslqsh")
 
-8. Create  and load sample database (airpordb) from object storage
- 
-    a. 
-
-    ```bash
-        <copy>\js</copy>
-    ```
-
-    b. 
-
-    ```bash
-    <copy>util.loadDump("https://objectstorage.us-ashburn-1.oraclecloud.com/p/yXOA3Kwid4uG0oHvHMufbK3cSESmQlU6-0bVB_1vQ8VxR0ggB1m-nDYYOXXy0O5W/n/idazzjlcjqzj/b/airportdb-bucket-112312031/o/airportdb_all/", {progressFile: "progress.json"})</copy>
-    ```
-
-    **Note** it takse about 12 minutes to create and load the airportbb schema
-
-9. View  the airportdb total records per table in
+8. View  the airportdb total records per table in
 
     a. 
 
