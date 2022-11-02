@@ -16,7 +16,7 @@ In this workshop, you will learn how to create a MySQL HeatWave Cluster, connect
 
 Overall this workshop will show you how easy it is to create and manage MySQL HeatWave and how MySQL HeatWave enables you to make informed business-critical decisions with real-time insights.
 
-_Estimated Lab Time:_ 5 hours +
+_Estimated Lab Time:_ 3 hours +
 
 ### About Product/Technology
 
@@ -38,7 +38,7 @@ and explain machine learning models within MySQL HeatWave.
 - Access to dozens of additional Oracle Cloud Services enabling organizations to embrace the shift to the cloud.
 
 **Lab Setup**
-  ![INTRO](./images/heatwave-ML-architecture-compute.png "heatwave architecture ")
+  ![INTRO](./images/heatwave-bastion-architecture-compute.png "hheatwave bastion architecture compute ")
 
 ### Objectives
 
@@ -51,14 +51,8 @@ In this lab, you will be guided through the following steps:
 - Connect to DB System using MySQL Shell through Compute Instance and Cloud Shell
 - Add HeatWave cluster to DB System
 - Run queries in HeatWave and MySQL and see the performance improvement in HeatWave!
-- Run MySQL Autopilot to get performance improvement suggestions
-- Create and Use HeatWave Machne Learning Models
-- Run queries again in HeatWave and see the improvement!
-- Use Bastion to access MySQL Shell for VS Code
-- Perform development tasks
-  - Use Workbench
-  - Create LAMP test application
-  - Use Oracle Anayltics Cloud
+- Create APEX application
+- Create LAMP Web application
 
 ### Prerequisites
 
