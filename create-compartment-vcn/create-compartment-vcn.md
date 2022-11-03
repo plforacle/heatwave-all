@@ -25,17 +25,63 @@ In this lab, you will be guided through the following tasks:
 
 ## Task 1: Create Compartment
 
-1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
+1. Click the **Navigation Menu** 
+    - in the upper left, navigate to **Identity & Security** 
+    - select **Compartments**.
 
 2. On the Compartments page, click **Create Compartment**.
 
     **Note:** Two Compartments, _Oracle Account Name_ (root) and a compartment for PaaS, were automatically created by the Oracle Cloud.
 
-3. In the Create Compartment dialog box, in the **NAME** field, enter **heatwave**, and then enter a Description enter **Comaprtment for MySQL HeatWave Database and components**, select the **Parent Compartment**, and click **Create Compartment**.
+3. In the Create Compartment dialog box  
+    - in the **NAME** field, enter **heatwave**
+    - enter a Description enter **Comaprtment for MySQL HeatWave Database and components**
+    - select the **Parent Compartment**, and click **Create Compartment**.
 
-## Task 2: Configure security list to allow MySQL incoming connections
+## Task 2: Create Virtual Cloud Network 
 
-1. On MDS-VCN page under 'Subnets in (root) Compartment', click  '**Private Subnet-MDS-VCN**'
+1. Click Navigation Menu   
+    Select Networking  
+    Select Virtual Cloud Networks
+    ![VCN](./images/select-vcn.png "select vcn ")
+
+2. Click **Start VCN Wizard**
+    ![VCN](./images/start-vcn.png "start vcn")
+
+3. Select 'Create VCN with Internet Connectivity'
+
+    Click 'Start VCN Wizard' 
+    ![VCN](./images/wizard-vcn.png "wizard vcn")
+
+4. Create a VCN with Internet Connectivity 
+
+    On Basic Information, complete the following fields:
+
+    VCN Name:
+
+    ```
+    <copy>MDS-VCN</copy>
+    ```
+
+    Compartment: Select  **heatwave**
+
+    Your screen should look similar to the following
+    ![VCN](./images/comp-sel-vcn.png "comp selvcn ")
+
+5. Click 'Next' at the bottom of the screen 
+
+6. Review Oracle Virtual Cloud Network (VCN), Subnets, and Gateways Click 'Create' to create the VCN
+    ![VCN](./images/create-vcn.png "create vcn")
+
+7. The Virtual Cloud Network creation is completing 
+    ![VCN](./images/create-show-vcn.png "create show vcn")
+
+8. Click 'View Virtual Cloud Network' to display the created VCN
+    ![VCN](./images/created-vcn.png "created vcn")
+
+## Task 3: Configure security list to allow MySQL incoming connections
+
+1. On MDS-VCN under 'Subnets in **heatwave** Compartment', click  '**Private Subnet-MDS-VCN**'
      ![VCN](./images/private-subnet-vcn.png "private subnet vcn")
 
 2. On Private Subnet-MDS-VCN page under 'Security Lists',  click  '**Security List for Private Subnet-MDS-VCN**'
@@ -44,27 +90,29 @@ In this lab, you will be guided through the following tasks:
 3. On Security List for Private Subnet-MDS-VCN page under 'Ingress Rules', click '**Add Ingress Rules**' 
     ![VCN](./images/private-subnet-ingress-vcn.png "private subnet ingress vcn")
 
-4. On Add Ingress Rules page under Ingress Rule 1
- 
-    Add an Ingress Rule with Source CIDR 
-        ```
-        <copy>0.0.0.0/0</copy>
-        ```
+4. On Add Ingress Rules page under Ingress Rule 1 add an Ingress Rule with Source CIDR 
+
+    ```
+    <copy>0.0.0.0/0</copy>
+    ```
     Destination Port Range 
-        ```
-        <copy>3306,33060</copy>
-        ```
-    Description 
-        ```
-        <copy>MySQL Port Access</copy>
-        ```
+
+    ```
+    <copy>3306,33060</copy>
+    ```
+    Description
+     
+    ```
+    <copy>MySQL Port Access</copy>
+    ```
+    
     Click 'Add Ingress Rule'
         ![VCN](./images/private-subnet-ingress-add-vcn.png "private subnet ingress add vcn")
 
 5. On Security List for Private Subnet-MDS-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
     ![VCN](./images/private-subnet-ingress-done-vcn.png "private subnet ingress done vcn")
 
-## Task 3: Configure security list to allow HTTP incoming connections
+## Task 4: Configure security list to allow HTTP incoming connections
 
 1. Navigation Menu > Networking > Virtual Cloud Networks
 
@@ -77,17 +125,22 @@ In this lab, you will be guided through the following tasks:
 5. Click Add Ingress Rules page under Ingress Rule 1
 
     Add an Ingress Rule with Source CIDR 
-        ```
-        <copy>0.0.0.0/0</copy>
-        ```
+
+    ```
+    <copy>0.0.0.0/0</copy>
+    ```
+
     Destination Port Range
-        ````
-        <copy>80,443</copy>
-        ````
-        Description
-        ````
-        <copy>Allow HTTP connections</copy>
-        ````
+
+    ````
+    <copy>80,443</copy>
+    ````
+    
+    Description
+
+    ````
+    <copy>Allow HTTP connections</copy>
+    ````
 
     ![VCN](./images/ingress-internet-vcn.png "ingress internet vcn")
 
