@@ -15,14 +15,15 @@
         },
 
         {
-          "title": "Lab 1: . Create Object Storage bucket and upload airportdb data",
+          "title": "Lab 1: Created Compartment and Virtual Cloud Network",
+          "filename": "../../create-compartment-vcn/create-compartment-vcn.md"
+        },
+
+        {
+          "title": "Lab 2: . Create Object Storage bucket and upload airportdb data",
           "filename": "../../store-data/store-data.md"
         },
- 
-        {
-          "title": "Lab 2: Created Virtual Cloud Network",
-          "filename": "../../create-vcn/create-vcn.md"
-        },
+
 
         {
           "title": "Lab 3: Created HeatWave DB and Cluster",
