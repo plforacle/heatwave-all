@@ -236,51 +236,8 @@ if ($stmt = $link->prepare($query)) {
     Example: http://129.213.167..../mydbchart.php
     ![MDS](./images/mydbchart-out.png " ")
 
-## TASK 4: Create HeatWave ML Web App
-
-1. Go to the development folder
-
-    ```bash
-    <copy>cd /var/www/html</copy>
-    ```
-
-2. Create application folder 
-
-    ```bash
-    <copy>sudo mkdir airportapp</copy>
-    ```
-
-3. Change to application folder 
-
-    ```bash
-    <copy>cd /var/www/html/airportapp</copy>
-    ```
-
-4. Download application code
-
-    ```bash
-    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/GpSI2eEwfsNM2ogTncD7WQkTlnLh-jAo7V3YgrkUQYuKfDfzRe1S-40d5Al9lMax/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp.zip</copy>
-    ```
-
-5. unzip Application code
-
-    ```bash
-    <copy>sudo unzip airportapp.zip</copy>
-    ```
-
-6. Replace the database IP in config.php file with your heatwave database IP and save the file.
-
-    ```bash
-    <copy>sudo nano config.php</copy>
-    ```
-
-7. Run the application as follows:
-
-    computeIP/airportapp/eureka_index.php
-
-    ![MDS](./images/airport_web.png "airport-web-php")
-
 ## Acknowledgements
+
 * **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
 * **Contributors** - Salil Pradhan, MySQL Principal Product Manager,  Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 * **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, Sept 2022

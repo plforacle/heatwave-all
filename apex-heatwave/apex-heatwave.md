@@ -14,9 +14,13 @@ The Oracle Database Development Tools team launched the Database Tools service i
     - Create Connection **MDS-HW**
 4. Run SQL Worksheet
 
-Check often for updates:
+## Task 2 Create and Configure APEX
 
-  ![APEX](./images/underconstruction.png "Under Construction ")
+1. Create and Launch APEX
+2. Create Workspace
+3. Create Web Credentials
+
+
 
 ## Learn More
 
