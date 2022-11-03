@@ -1,4 +1,4 @@
-# Connect to MySQL HeatWave With Compute 
+# Create Compute with MySQL Shell for DB Connection 
 
 ## Introduction
 
@@ -93,7 +93,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     Instances
     ![CONNECT](./images/compute-launch.png "compute launch ")
 
-5. On Instances in **(root)** Compartment, click  **Create Instance**
+5. On Instances in **heatwave** Compartment, click  **Create Instance**
     ![CONNECT](./images/compute-create.png "compute create")
 
 6. On Create Compute Instance 
@@ -104,7 +104,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     <copy>MDS-Client</copy>
     ```
 
-7. Make sure **(root)** compartment is selected 
+7. Make sure **heatwave** compartment is selected 
 
 8. On Placement, keep the selected Availability Domain
 
@@ -135,7 +135,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![CONNECT](./images/comute-running.png "comute running")
 
-## Task 3: Connect to MySQL Database System and Create and Load airportdb schema 
+## Task 3: Install MySQL shell and connect to  MDS-HW database
 
 1. Copy the public IP address of the active Compute Instance to your notepad
 

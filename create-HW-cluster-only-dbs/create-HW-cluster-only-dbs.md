@@ -19,7 +19,7 @@ In this lab, you will be guided through the following tasks:
 - Some Experience with MySQL Shell
 - Must Complete Lab 1
 
-## Task 1: Create MySQL Database for HeatWave (DB System
+## Task 1: Create MySQL Database for HeatWave DB System
 
 1. Go to Navigation Menu
          Databases
@@ -43,7 +43,7 @@ In this lab, you will be guided through the following tasks:
 
 4. Provide basic information for the DB System:
 
-    Select Compartment **(root)**
+    Select Compartment **heatwave**
 
     Enter Name
 
