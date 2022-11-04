@@ -35,7 +35,7 @@ In this lab, you will be guided through the following tasks:
 
 3. In the Create Compartment dialog box  
     - in the **NAME** field, enter **heatwave**
-    - enter a Description enter **Comaprtment for MySQL HeatWave Database and components**
+    - enter a Description enter **Compartment for MySQL HeatWave Database and components**
     - select the **Parent Compartment**, and click **Create Compartment**.
 
 ## Task 2: Create Virtual Cloud Network 
