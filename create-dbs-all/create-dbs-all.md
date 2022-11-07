@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create and configure the ywo MySQL HeatWave DB Systems. 
+In this lab, you will create and configure the two MySQL HeatWave DB Systems. 
 
 _Estimated Time:_ 10 minutes
 
