@@ -43,13 +43,13 @@ In this Task, you will create and configure a MySQL Standalone DB System.
     Select Compartment **heatwave**
 
     Enter Name
-        ````
-        <copy>heatwave-sa</copy>
-        ````
+    ````
+    <copy>heatwave-sa</copy>
+    ````
     Enter Description
-        ````
-        <copy>MySQL HeatWAve Database Service Standalone instance</copy>
-        ````
+    ````
+    <copy>MySQL HeatWAve Database Service Standalone instance</copy>
+    ````
 
     Select **Standalone** to specify a Standalone DB System
         ![MDS](./images/04mysql03-1.png " ")
