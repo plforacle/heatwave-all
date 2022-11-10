@@ -1,10 +1,29 @@
-# Introduction
+# Develop MySQL HeatWave Apps with Oracle APEX
+
+## Introduction
 
 The Oracle Database Development Tools team launched the Database Tools service in OCI providing instance web browser to create connections to the MySQL Database Service in OCI. 
 
 Using APEX, developers can quickly develop and deploy compelling apps that solve real problems and provide immediate value. You don't need to be an expert in a vast array of technologies to deliver sophisticated solutions. Focus on solving the problem and let APEX take care of the rest.[https://apex.oracle.com/en/platform/why-oracle-apex/](https://apex.oracle.com/en/platform/why-oracle-apex/)
 
+### Objectives
+
+In this lab, you will be guided through the following tasks:
+
+- Create SSH Key on OCI Cloud
+- Create Compute Instance
+- Setup Compute Instance with MySQL Shell
+- Connect to MySQL DB System
+
+### Prerequisites
+
+- An Oracle Trial or Paid Cloud Account
+- Some Experience with MySQL Shell
+- Must Complete Lab 2
+
 ## Task 1 Setup MySQL Support in Database Tools in OCI
+
+1. [https://peterobrien.blog/2022/06/15/
 
 1. Menu: Identity & Security>  
     - Create Vault: **MDS-HW**
