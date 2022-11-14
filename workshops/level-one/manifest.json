@@ -41,7 +41,7 @@
         },
 
         {
-          "title": "Lab 6: Connect to MySQL HeatWave with Compute and Create and Load airportdb Schema",
+          "title": "Lab 6: Connect to MySQL HeatWave with Compute ",
           "filename": "../../connect-dbs-compute/connect-dbs-compute.md"
         },
            
