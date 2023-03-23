@@ -42,7 +42,7 @@
         },
            
         {
-            "title": "Lab 6: Load MySQL HeatWave Cluster",
+            "title": "Lab 6: Add and Load MySQL HeatWave Cluster",
             "filename": "../../load-heatwave/load-heatwave.md"
         },
         

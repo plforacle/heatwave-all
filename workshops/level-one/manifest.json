@@ -20,7 +20,7 @@
         },
 
         {
-          "title": "Lab 2: Create HeatWave DB and Cluster",
+          "title": "Lab 2: Create HeatWave Database Systems",
           "filename": "../../create-hw-cluster-only-dbs/create-hw-cluster-only-dbs.md"
         },    
 
@@ -30,7 +30,7 @@
         },
            
         {
-            "title": "Lab 4: Load MySQL HeatWave Cluster",
+            "title": "Lab 4: Add and Load MySQL HeatWave Cluster",
             "filename": "../../load-heatwave/load-heatwave.md"
         },
         

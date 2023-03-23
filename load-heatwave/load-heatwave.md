@@ -1,4 +1,4 @@
-# Load Mysql HeatWave Cluster 
+# Add and Load Mysql HeatWave Cluster 
 
 ## Introduction
 
