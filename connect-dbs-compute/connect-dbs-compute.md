@@ -30,7 +30,7 @@ The Cloud Shell machine is a small virtual machine running a Bash shell which yo
 
 1. To start the Oracle Cloud shell, go to your Cloud console and click the cloud shell icon at the top right of the page. This will open the Cloud Shell in the browser, the first time it takes some time to generate it.
 
-    ![CONNECT](./images/cloudshellopen.png "cloudshellopen ")
+    ![CONNECT](./images/cloudshell-open.png "cloudshellopen ")
 
     ![CONNECT](./images/cloudshell-welcome.png "cloudshell welcome ")
 
@@ -73,7 +73,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 2. Do the followings steps to copy the public SSH key to the  notepad
 
     Open the Cloud shell
-    ![CONNECT](./images/cloudshell-copy-ssh.png "cloudshell copy ssh")
+    ![CONNECT](./images/cloudshell-open.png "cloudshell open")
 
     Enter the following command  
 
@@ -92,7 +92,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     Navigation Menu
     Compute
     Instances
-    ![CONNECT](./images/compute-launch.png "compute launch ")
+    ![CONNECT](./images/compute-menu.png "compute menu ")
 
 5. On Instances in **(root)** Compartment, click  **Create Instance**
     ![CONNECT](./images/compute-create.png "compute create")
@@ -102,7 +102,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     Enter Name
 
     ```bash
-    <copy>MDS-Client</copy>
+    <copy>HW-Client</copy>
     ```
 
 7. Make sure **(root)** compartment is selected 
@@ -117,7 +117,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
       ![CONNECT](./images/compute-shape-select.png "compute shape select") 
  
-11. On Networking, make sure '**MDS-VCN**' is selected
+11. On Networking, make sure '**HW-VCN**' is selected
 
     'Assign a public IP address' should be set to Yes 
 
@@ -134,7 +134,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
 15. The state 'Running' indicates that the Virtual Machine is ready to use. 
 
-    ![CONNECT](./images/comute-running.png "comute running")
+    ![CONNECT](./images/compute-created.png "comute created")
 
 ## Task 3: Connect to MySQL Database System and Create and Load airportdb schema 
 
@@ -143,13 +143,13 @@ You will need a compute Instance to connect to your brand new MySQL database.
     - Go to Navigation Menu
             Compute
             Instances
-    ![CONNECT](./images/db-list.png "db list")
+    ![CONNECT](./images/compute-list.png "compute list")
 
-    - Click the `MDS-Client` Compute Instance link
+    - Click the `HW-Client` Compute Instance link
 
     ![CONNECT](./images/compute-public-ip.png "compute public ip")
 
-    - Copy `MDS-Client` plus  the `Public IP Address` to the notepad
+    - Copy `HW-Client` plus  the `Public IP Address` to the notepad
 
 2. Copy the private IP address of the active MySQl Database Service Instance to your notepad
 
@@ -159,20 +159,20 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
      ![CONNECT](./images/db-list.png "db list")
 
-    - Click the `MDS-HW` Database System link
+    - Click the `HW-DB` Database System link
 
      ![CONNECT](./images/db-active.png "db active ")
 
-    - Copy `MDS-HW` plus the `Private IP Address` to the notepad
+    - Copy `HW-DB` plus the `Private IP Address` to the notepad
 
 3. Your notepad should look like the following:
-     ![CONNECT](./images/notepad-rsa-key-compute-mds.png "notepad rsa key compute mds")
+     ![CONNECT](./images/notepad-rsa-key-compute-hw.png "notepad rsa key compute hw")
 
-4. Indicate the location of the private key you created earlier with **MDS-Client**. 
+4. Indicate the location of the private key you created earlier with **HW-Client**. 
 
     Enter the username **opc** and the Public **IP Address**.
 
-    Note: The **MDS-Client**  shows the  Public IP Address as mentioned on TASK 5: #11
+    Note: The **HW-Client**  shows the  Public IP Address as mentioned on TASK 5: #11
 
     (Example: **ssh -i ~/.ssh/id_rsa opc@132.145.170...**) 
 
@@ -180,7 +180,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     <copy>ssh -i ~/.ssh/id_rsa opc@<your_compute_instance_ip></copy>
     ```
 
-    ![CONNECT](./images/connect-signin.png "connect signin")
+    ![CONNECT](./images/connect-ssh.png "connect ssh")
 
     **Install MySQL Shell on the Compute Instance**
 
@@ -193,9 +193,9 @@ You will need a compute Instance to connect to your brand new MySQL database.
      ```bash
     <copy>sudo yum install mysql-shell -y</copy>
     ```
-    ![CONNECT](./images/connect-shell.png "connect shell")
+    ![CONNECT](./images/install-mysql-shell.png "install-mysql-shell")
 
-6. Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the MDS-HW private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
+6. Use the following command to connect to MySQL using the MySQL Shell client tool. Be sure to add the HW-DB private IP address at the end of the command. Also enter the admin user and the db password created on Lab 1
 
     (Example  **mysqlsh -uadmin -p -h10.0.1..   --sql**)
 
@@ -205,7 +205,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
     <copy>mysqlsh -uadmin -p -h 10.0.1.... --sql</copy>
     ```
 
-    ![CONNECT](./images/connect-myslqsh.png "connect myslqsh")
+    ![CONNECT](./images/connect-mysqlsh.png "connect myslqsh")
 
 7. Create  and load sample database (airpordb) from object storage
  

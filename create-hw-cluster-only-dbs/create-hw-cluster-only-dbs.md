@@ -16,7 +16,7 @@ In this lab, you will be guided through the following tasks:
 
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with MySQL Shell
-- Complete Lab1
+- Complete Lab 1
 
 ## Task 1: Create MySQL Database for HeatWave (DB System)
 
@@ -30,7 +30,7 @@ In this lab, you will be guided through the following tasks:
     ![MDS](./images/mysql-create.png "mysql create ")
 
 3. Select the Development or Testing Option
-    ![MDS](./images/mysql_create_select_option.png "select option")
+    ![MDS](./images/mysql-create-select-option.png "mysql create select option")
 
 4. Create MySQL DB System dialog complete the fields in each section
 
@@ -50,7 +50,7 @@ In this lab, you will be guided through the following tasks:
     Enter Name
 
     ```bash
-    <copy>MDS-HW</copy>
+    <copy>HW-DB</copy>
     ```
 
     Enter Description
@@ -74,9 +74,9 @@ In this lab, you will be guided through the following tasks:
 
 7. On Configure networking, keep the default values
 
-    Virtual Cloud Network: **MDS-VCN**
+    Virtual Cloud Network: **HW-VCN**
 
-    Subnet: **Private Subnet-MDS-VCN (Regional)**
+    Subnet: **Private Subnet-HW-VCN (Regional)**
 
     ![MDS](./images/mysql-vcn.png "mysql vcn ")
 
@@ -107,25 +107,25 @@ In this lab, you will be guided through the following tasks:
 12. Go to the Networking tab, in the Hostname field enter (same as DB System Name):
 
     ```bash
-        <copy>MDS-HW</copy> 
+        <copy>HW-DB</copy> 
     ```
 
 13. Review **Create MySQL DB System**  Screen
 
-    ![MDS](./images/mysql_create_db.png "mysql create db")
+    ![MDS](./images/mysql-create-db.png "mysql create db")
 
     Click the '**Create**' button
 
-14. The New MySQL DB System will be ready to use after a few minutes
+14. The New MySql DB System will be ready to use after a few minutes
 
     The state will be shown as 'Creating' during the creation
-    ![MDS](./images/mysql-create-button.png "mysql create button ")
+    ![MDS](./images/mysql-creating.png "mysql creating")
 
 15. The state 'Active' indicates that the DB System is ready for use
 
-    On MDS-HW Page, check the MySQL Endpoint (Private IP Address)
+    On HW-DB Page, check the MySQL Endpoint (Private IP Address)
 
-    ![MDS](./images/mysql-create-button.png"mysql create button ")
+    ![MDS](./images/mysql-created.png"mysql created")
 
 
 ## Acknowledgements
