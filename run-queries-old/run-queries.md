@@ -243,7 +243,7 @@ GROUP BY firstname , lastname;</copy>
 
 ## Acknowledgements
 
-- **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak, MySQL Solution Engineering, Selena Sánchez, MySQL Solutions Engineer
+- **Author** - Perside Foster, MySQL Solution Engineering
 
 - **Contributors** - Mndy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 - **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
