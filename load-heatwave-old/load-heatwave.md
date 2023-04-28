@@ -13,7 +13,7 @@ _Estimated Time:_ 10 minutes
 
 In this lab, you will be guided through the following task:
 
-- Add a HeatWave Cluster to HW-DB MySQL Database System
+- Add a HeatWave Cluster to MDS-HW MySQL Database System
 - Load Airportdb Data into HeatWave
 
 ### Prerequisites
@@ -22,30 +22,30 @@ In this lab, you will be guided through the following task:
 - Some Experience with MySQL Shell
 - Completed Lab 2
 
-## Task 1: Add a HeatWave Cluster to HW-DB MySQL Database System
+## Task 1: Add a HeatWave Cluster to MDS-HW MySQL Database System
 
 1. Open the navigation menu  
     Databases
     MySQL
     DB Systems
 2. Choose the root Compartment. A list of DB Systems is displayed.
-    ![Connect](./images/hw-db-list.png "hw db list ")
-3. In the list of DB Systems, click the **HW-DB** system. click **More Action ->  Add HeatWave Cluster**.
-    ![Connect](./images/mysql-add-hw.png "mysql add hw ")
+    ![Connect](./images/mysql-add-heatwave.png "mysql add heatwave ")
+3. In the list of DB Systems, click the **MDS-HW** system. click **More Action ->  Add HeatWave Cluster**.
+    ![Connect](./images/mysql-add-heat-vcn.png "mysql add heat vcn ")
 4. On the “Add HeatWave Cluster” dialog, select “MySQL.HeatWave.VM.Standard.E3” shape
 5. Click “Estimate Node Count” button
-    ![Connect](./images/mysql-add-hw-estimate.png "mysql add hw estimate ")
+    ![Connect](./images/mysql-add-heat-estimate.png "mysql add heat estimate ")
 6. On the “Estimate Node Count” page, click “Generate Estimate”. This will trigger the auto
 provisioning advisor to sample the data stored in InnoDB and based on machine learning
 algorithm, it will predict the minimum number of nodes needed.
-    ![Connect](./images/mysql-hw-cluster-estimate.png "mysql hw cluster estimate ")
+    ![Connect](./images/mysql-heat-cluster-estimate.png "mysql heat cluster estimate ")
 7. Once the estimations are calculated, it shows list of database schemas in MySQL node. If you expand the schema and select different tables, you will see the estimated memory required in the Summary box, There is a Load Command (heatwave_load) generated in the text box window, which will change based on the selection of databases/tables
 8. Select the airportdb schema and click “Apply Node Count Estimate” to apply the node count
-    ![Connect](./images/mysql-hw-apply-estimate.png "mysql hw apply estimate ")
+    ![Connect](./images/mysql-heat-apply-estimate.png "mysql heat apply estimate ")
 9. **Set Node Count to 2 for this Lab Click** “Add HeatWave Cluster” to create the HeatWave cluster
-    ![Connect](./images/mysql-apply-hw-cluster.png "mysql apply hw cluster ")
+    ![Connect](./images/mysql-apply-heat-cluster.png "mysql apply heat cluster ")
 10. HeatWave creation will take about 10 minutes. From the DB display page scroll down to the Resources section. Click the **HeatWave** link. Your completed HeatWave Cluster Information section will look like this:
-    ![Connect](./images/mysql-hw-cluster-complete.png "mysql hw cluster complete ")
+    ![Connect](./images/mysql-heat-cluster-complete.png "mysql heat cluster complete ")
 
 ## Task 2: Load airportdb Data into HeatWave Cluster
 
@@ -93,7 +93,7 @@ algorithm, it will predict the minimum number of nodes needed.
 
 ## Acknowledgements
 
-- **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak, MySQL Solution Engineering, Selena Sánchez, MySQL Solutions Engineer
+- **Author** - Perside Foster, MySQL Solution Engineering
 
 - **Contributors** - Mndy Pang, Principal Product Manager, Salil Pradhan, Principal Product Manager, Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 - **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
