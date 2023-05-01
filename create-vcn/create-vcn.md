@@ -144,6 +144,6 @@ Description
 
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
+* **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak, MySQL Solution Engineering, Selena Sánchez, MySQL Solutions Engineer
 * **Contributors** - Frédéric Descamps, MySQL Community  Manager, Orlando Gentil, Principal Training Lead and Evangelist
 * **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, March 2022
