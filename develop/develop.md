@@ -115,7 +115,7 @@ phpinfo();
 
    Example: http://129.213.167.../info.php
 
-## Task 3: – Create MDS / PHP connect app
+## Task 3: – Create HW DB / PHP connect app
 
 1. Security update"   set SELinux to allow Apache to connect to MySQL
 
@@ -137,7 +137,7 @@ phpinfo();
     ```bash
     <copy><?php
 // Database credentials
-define('DB_SERVER', '10.0.1...');// MDS server IP address
+define('DB_SERVER', '10.0.1...');// HW DB server IP address
 define('DB_USERNAME', 'admin');
 define('DB_PASSWORD', 'Welcome#12345');
 define('DB_NAME', 'airportdb');
@@ -238,6 +238,6 @@ if ($stmt = $link->prepare($query)) {
     ![MDS](./images/mydbchart-out.png " ")
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
+* **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak, MySQL Solution Engineering
 * **Contributors** - Salil Pradhan, MySQL Principal Product Manager,  Nick Mader, MySQL Global Channel Enablement & Strategy Manager
 * **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, March 2023

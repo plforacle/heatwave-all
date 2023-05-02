@@ -15,13 +15,13 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 1. [https://peterobrien.blog/2022/06/15/](https://peterobrien.blog/2022/06/15/)
 
 1. Menu: Identity & Security>  
-    - Create Vault: **MDS-HW**
-    - Create Key **MDS-HW**
-    - Create Secret **MDS-HW**  Secret is admin login **password** 
+    - Create Vault: **HW-DB**
+    - Create Key **HW-DB**
+    - Create Secret **HW-DB**  Secret is admin login **password** 
 2. Menu: Developer>Database Tools
-    - Create Private Endpoints **MDS-HW**
+    - Create Private Endpoints **HW-DB**
 3. Menu: Developer>Database Tools
-    - Create Connection **MDS-HW**
+    - Create Connection **HW-DB**
 4. Run SQL Worksheet
 
 
