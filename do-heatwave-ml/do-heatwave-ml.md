@@ -194,13 +194,13 @@ In this example, data is assigned to a @row\_input session variable, and the var
     ```
 
     ```bash
-    <copy>SELECT sys.ML_PREDICT_ROW(@airline_input, @airline_model);</copy>
+    <copy>SELECT sys.ML_PREDICT_ROW(@airline_input, @airline_model,null);</copy>
     ```
 
 2. Generate an explanation for the same row of data using the ML\_EXPLAIN\_ROW routine to understand how the prediction was made:
 
     ```bash
-    <copy>SELECT sys.ML_EXPLAIN_ROW(@airline_input, @airline_model);</copy>
+    <copy>SELECT JSON_PRETTY(sys.ML_EXPLAIN_ROW(@airline_input, @airline_model, JSON_OBJECT('prediction_explainer', 'permutation_importance')));</copy>
     ```
 
 
@@ -209,7 +209,7 @@ In this example, data is assigned to a @row\_input session variable, and the var
 1. Score the model using ML\_SCORE to assess the model's reliability. This example uses the accuracy metric, which is one of the many scoring metrics supported by HeatWave ML.
 
     ```bash
-    <copy>CALL sys.ML_SCORE('FLIGHTS_BTS_DELAY.bts_airport_delay_train', 'OPER_CARRIER', @airline_model, 'accuracy', @score);</copy>
+    <copy>CALL sys.ML_SCORE('FLIGHTS_BTS_DELAY.bts_airport_delay_train', 'OPER_CARRIER', @airline_model, 'accuracy', @score,null);</copy>
     ```
 
 2. To retrieve the computed score, query the @score session variable
