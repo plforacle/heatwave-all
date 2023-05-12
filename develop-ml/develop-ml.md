@@ -259,7 +259,7 @@ if ($stmt = $link->prepare($query)) {
 4. Download application code
 
     ```bash
-    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/GpSI2eEwfsNM2ogTncD7WQkTlnLh-jAo7V3YgrkUQYuKfDfzRe1S-40d5Al9lMax/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp.zip</copy>
+    <copy> sudo wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/UfqwN3uKxYZlixYZz6ARjJ2KiZBiTMAheJkNdDpjabz13XhoMDKg1CIZmuSMDTqX/n/idazzjlcjqzj/b/airportdb-bucket-10282022/o/airportapp_automl.zip</copy>
     ```
 
 5. unzip Application code
