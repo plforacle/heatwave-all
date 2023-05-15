@@ -90,15 +90,31 @@ In this Task, you will create and configure a MySQL Standalone DB System.
 
     ![MDS](./images/04mysql08.png" ")
 
-    Click the **Create button**
+10. Go to the Networking tab, in the Hostname field enter (same as DB System Name):
+
+    ```bash
+    <copy>mdshw</copy> 
+    ```
+
+11. Set Data Import Link
+    - Select Data Import Tab
+    - Add the PAR source URL if your Home Region is Ashburn
+
+        ```bash
+        <copy>https://objectstorage.us-ashburn-1.oraclecloud.com/p/nhiMwiAomns-MaHZdulEepNmVIgC97Sr0Bom6lTjZApXyR7coAiHLtSZDq3q4SXP/n/mysqlpm/b/plf_mysql_customer_orders/o/mco_dump_02102023/</copy> 
+        ```
+
+    ![HeatWave](./images/mysql-data-import.png "mysql data import ")
+
+12. Click the **Create button**
     ![MDS](./images/04mysql09-1.png" ")
 
-10. The New MySQL DB System will be ready to use after a few minutes.
+13. The New MySQL DB System will be ready to use after a few minutes.
 
     The state will be shown as Creating during the creation
     ![MDS](./images/04mysql10-1.png" ")
 
-11. The state Active indicates that the DB System is ready to use.
+14. The state Active indicates that the DB System is ready to use.
 
     Check the MySQL endpoint (Address) under Instances in the MySQL DB System Details page.
 
@@ -174,9 +190,10 @@ In this Task, you will create and configure a MySQL HeatWave DB System.
 
     Data Storage Size (GB) Set value to:  **1024**
 
-    ```
+    ```bash
     <copy>1024</copy>
     ```
+
     ![MDS](./images/04mysql07-3-100-2.png" ")
 
 9. On Configure Backups, disable 'Enable Automatic Backup'
@@ -185,24 +202,18 @@ In this Task, you will create and configure a MySQL HeatWave DB System.
 
 10. Click on Show Advanced Options
 
-11. Go to the Networking tab, in the Hostname field enter (same as DB System Name):
-
-	```
-	<copy>mdshw</copy> 
-	```
-
-12. Review **Create MySQL DB System**  Screen
+11. Review **Create MySQL DB System**  Screen
 
     ![MDS](./images/04mysql09-3.png " ")
 
     Click the '**Create**' button
 
-13. The New MySQL DB System will be ready to use after a few minutes
+12. The New MySQL DB System will be ready to use after a few minutes
 
     The state will be shown as 'Creating' during the creation
     ![MDS](./images/04mysql10-3.png" ")
 
-14. The state 'Active' indicates that the DB System is ready for use
+13. The state 'Active' indicates that the DB System is ready for use
 
     On MDS-HW Page, check the MySQL Endpoint (Private IP Address)
 
