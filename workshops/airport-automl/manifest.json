@@ -16,8 +16,9 @@
 
         {
           "title": "Lab 1: Create Virtual Cloud Network",
-          "filename": "../../store-data/store-data.md"
+          "filename": "../../create-vcn/create-vcn.md"
         },
+
 
         {
           "title": "Lab 2: Use Object Storage Bucket",
