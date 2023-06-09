@@ -265,7 +265,11 @@ if ($stmt = $link->prepare($query)) {
 5. unzip Application code
 
     ```bash
-    <copy>sudo unzip airportapp.zip</copy>
+    <copy>sudo unzip airportapp_automl.zip</copy>
+    ```
+
+    ```bash
+    <copy>cd airportapp/airportapp</copy>
     ```
 
 6. Replace the database IP in config.php file with your heatwave database IP and save the file.
@@ -276,11 +280,12 @@ if ($stmt = $link->prepare($query)) {
 
 7. Run the application as follows:
 
-    computeIP/airportapp/eureka_index.php
+    http://computeIP/airportapp/airportapp/eureka_index.php
 
     ![MDS](./images/airport_web.png "airport-web-php")
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
-* **Contributors** - Salil Pradhan, MySQL Principal Product Manager,  Nick Mader, MySQL Global Channel Enablement & Strategy Manager
-* **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, Sept 2022
+
+- **Author** - Perside Foster, MySQL Solution Engineering, Harsh Nayak , MySQL Solution Engineering 
+- **Contributors** - Salil Pradhan, MySQL Principal Product Manager,  Nick Mader, MySQL Global Channel Enablement & Strategy Manager
+- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, Sept 2022

@@ -44,21 +44,26 @@
           "filename": "../../do-oac/do-oac.md"
         }, 
 
+
         {
-          "title": "Lab 7: Do HeatWave Machine Learning",
+          "title": "Lab 7: Develop MySQL HeatWave LAMP Apps",
+          "filename": "../../develop/develop.md"
+        }, 
+
+        {
+          "title": "Lab 8: Develop MySQL HeatWave Apps with Oracle APEX",
+          "filename": "../../apex-heatwave/apex-heatwave.md"
+        }, 
+
+        {
+          "title": "Lab 9: Do HeatWave Machine Learning",
           "filename": "../../do-heatwave-ml/do-heatwave-ml.md"
         }, 
 
         {
-          "title": "Lab 8: Develop HeatWave Machine Learning LAMP APP",
+          "title": "Lab 10: Develop HeatWave Machine Learning",
           "filename": "../../develop-ml/develop-ml.md"
-        }, 
- 
-
-        {
-          "title": "Lab 9: Develop MySQL HeatWave Apps with Oracle APEX",
-          "filename": "../../apex-heatwave/apex-heatwave.md"
-        }, 
+        },
         
         {
             "title": "Need Help?",
